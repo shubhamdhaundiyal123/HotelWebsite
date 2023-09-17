@@ -7,13 +7,18 @@ const Navbar = () => {
     const navbarRef = useRef();
     const searchHandler = () => {
        searchRef.current.classList.toggle('active');
+       cartRef.current.classList.remove('active');
+       navbarRef.current.classList.remove('active');
     }
     const cartHandler = () => {
         cartRef.current.classList.toggle('active');
+        searchRef.current.classList.remove('active');
+        navbarRef.current.classList.remove('active');
     }
     const navbarHandler = () => {
-        console.log("Welcome you are in navbarHandler")
         navbarRef.current.classList.toggle('active');
+        cartRef.current.classList.remove('active');
+        searchRef.current.classList.remove('active');
     } 
   return (
     <>
