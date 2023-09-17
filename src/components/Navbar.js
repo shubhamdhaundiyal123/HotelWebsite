@@ -4,19 +4,24 @@ import { cart } from '../Data';
 const Navbar = () => {
     const searchRef = useRef();
     const cartRef = useRef();
+    const navbarRef = useRef();
     const searchHandler = () => {
        searchRef.current.classList.toggle('active');
     }
     const cartHandler = () => {
         cartRef.current.classList.toggle('active');
     }
+    const navbarHandler = () => {
+        console.log("Welcome you are in navbarHandler")
+        navbarRef.current.classList.toggle('active');
+    } 
   return (
     <>
       <header className="header">
         <a href="" className="logo">
             <img src={Logo} alt="logo" />
         </a>
-        <nav className='navbar' >
+        <nav className='navbar' ref={navbarRef}>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
@@ -28,7 +33,7 @@ const Navbar = () => {
         <div className="icons">
             <div className="fas fa-search" onClick={searchHandler}></div>
             <div className="fas fa-shopping-cart" onClick={cartHandler}></div>
-            <div className="fas ba-bars" id="menu-btn" ></div>
+            <div className="fas fa-bars" id="menu-btn" onClick={navbarHandler} ></div>
         </div>
         <div className='search-form' ref={searchRef} >
             <input type="search" placeholder="Search Here..." id='search-box'/>
