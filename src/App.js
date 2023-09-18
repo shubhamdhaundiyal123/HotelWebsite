@@ -7,6 +7,7 @@ import Menu from "./components/Menu";
 import Product from "./components/Product";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
+import Blog from "./components/Blog";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
      <Product/>
      <Review/>
      <Contact/>
+     <Blog/>
     </>     
   );
 };
