@@ -6,6 +6,7 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Product from "./components/Product";
 import Review from "./components/Review";
+import Contact from "./components/Contact";
 const App = () => {
   return (
     <>
@@ -15,7 +16,8 @@ const App = () => {
      <Menu/>
      <Product/>
      <Review/>
-    </>
+     <Contact/>
+    </>     
   );
 };
 
